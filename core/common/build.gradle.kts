@@ -2,12 +2,13 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.dagger.hilt.android)
     alias(libs.plugins.ksp)
+
 }
 
 android {
-    namespace = "com.example.data"
+    namespace = "com.example.common"
     compileSdk {
-        version = release(36) {
+        version = release(37) {
             minorApiLevel = 1
         }
     }
@@ -25,16 +26,13 @@ android {
 }
 
 dependencies {
-    api(project(":core:common"))
-
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
 
-    // Hilt
+    // Hilt Core Dependencies
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -25,3 +25,4 @@ dependencyResolutionManagement {
 rootProject.name = "Mindora"
 include(":app")
 include(":core:data")
+include(":core:common")
