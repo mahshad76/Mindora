@@ -13,6 +13,7 @@ hiltNavigationCompose = "1.4.0"
 hilt = "2.60.1"
 ksp = "2.3.9"
 appcompat = "1.7.1"
+lifecycleViewmodelNavigation3 = "<version>"
 material = "1.14.0"
 androidxNavigation3 = "1.0.0"
 navigation3Runtime = "1.1.6"
@@ -21,6 +22,7 @@ material3 = "1.4.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "lifecycleViewmodelNavigation3" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
