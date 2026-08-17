@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.mahshad.interests.impl"
+    namespace = "com.mahshad.bookmark.impl"
     compileSdk {
         version = release(37) {
             minorApiLevel = 1

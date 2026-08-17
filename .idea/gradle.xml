@@ -13,6 +13,13 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/common" />
             <option value="$PROJECT_DIR$/core/data" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/bookmark" />
+            <option value="$PROJECT_DIR$/feature/bookmark/api" />
+            <option value="$PROJECT_DIR$/feature/bookmark/impl" />
+            <option value="$PROJECT_DIR$/feature/interests" />
+            <option value="$PROJECT_DIR$/feature/interests/api" />
+            <option value="$PROJECT_DIR$/feature/interests/impl" />
           </set>
         </option>
       </GradleProjectSettings>

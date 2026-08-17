@@ -1,10 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.mahshad.interests.impl"
+    namespace = "com.mahshadbookmark.api"
     compileSdk {
         version = release(37) {
             minorApiLevel = 1
@@ -25,10 +24,9 @@ android {
 
 dependencies {
     implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.material3)
     implementation(libs.material)
+    implementation(libs.navigation3.runtime)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

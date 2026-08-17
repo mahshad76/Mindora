@@ -42,7 +42,8 @@ android {
 dependencies {
     implementation(project(":feature:interests:api"))
     implementation(project(":feature:interests:impl"))
-
+    implementation(project(":feature:bookmark:api"))
+    implementation(project(":feature:bookmark:impl"))
     implementation(project(":core:data"))
 
     implementation(platform(libs.androidx.compose.bom))
@@ -54,13 +55,16 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
+    // Navigation
+    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.androidx.navigation3.ui)
+
     // Hilt Core Dependencies
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
     testImplementation(libs.junit)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

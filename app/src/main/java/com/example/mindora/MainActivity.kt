@@ -30,9 +30,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MindoraTheme {
-                CompositionLocalProvider() {
-                    MindoraApp(networkMonitor = networkMonitor)
-                }
+                MindoraApp(networkMonitor = networkMonitor)
             }
         }
     }

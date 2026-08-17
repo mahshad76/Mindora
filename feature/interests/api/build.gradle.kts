@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.api"
+    namespace = "com.mahshad.interests.api"
     compileSdk {
         version = release(37) {
             minorApiLevel = 1
@@ -26,6 +26,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+    implementation(libs.navigation3.runtime)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
