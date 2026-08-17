@@ -29,10 +29,9 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
 import com.example.data.util.NetworkMonitor
 import com.example.mindora.R
-import com.mahshad.api.navigation.BookmarkNavKey
 import com.mahshad.api.navigation.InterestsNavKey
-import com.mahshad.impl.BookmarkScreen
-import com.mahshad.impl.InterestsScreen
+import com.mahshad.impl.BookmarkEntry
+import com.mahshad.impl.InterestsEntry
 
 const val EMPTY_LOCAL_PROVIDER_MESSAGE = "SnackbarHostState state should be initialized at runtime"
 
@@ -42,12 +41,8 @@ fun MindoraApp(networkMonitor: NetworkMonitor) {
     val snackbarHostState = remember { SnackbarHostState() }
     val notConnected = stringResource(R.string.not_connected)
     val entryProvider = entryProvider {
-        entry(BookmarkNavKey) {
-            BookmarkScreen()
-        }
-        entry(InterestsNavKey) {
-            InterestsScreen()
-        }
+        InterestsEntry()
+        BookmarkEntry()
     }
     val backStack = remember { mutableStateListOf<NavKey>(InterestsNavKey) }
 
