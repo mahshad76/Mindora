@@ -42,6 +42,12 @@ android {
             "TMDB_ACCESS_TOKEN",
             "\"${localProperties.getProperty("TMDB_ACCESS_TOKEN", "")}\""
         )
+
+        buildConfigField(
+            "String",
+            "TMDB_BASE_URL",
+            "\"${localProperties.getProperty("TMDB_BASE_URL", "")}\""
+        )
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

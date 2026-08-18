@@ -26,6 +26,7 @@ android {
 
 dependencies {
     api(project(":core:common"))
+    api(project(":core:network"))
 
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
