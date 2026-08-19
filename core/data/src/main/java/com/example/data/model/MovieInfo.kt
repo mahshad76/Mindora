@@ -5,7 +5,8 @@ import com.mahshad.model.MovieInfo
 import com.mahshad.network.model.NetworkResult
 
 /**
- * This is an offline first application
+ * Converts the network model to the local model for persisting
+ * by the local data source
  */
 fun NetworkResult.asEntity() = ResultEntity(
     adult = this.adult,
@@ -24,6 +25,10 @@ fun NetworkResult.asEntity() = ResultEntity(
     voteCount = this.voteCount
 )
 
+/**
+ * Converts the local model to the external model for use
+ * by layers external to the data layer
+ */
 fun ResultEntity.asExternalModel() = MovieInfo(
     adult = this.adult,
     backdropPath = this.backdropPath,
