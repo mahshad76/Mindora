@@ -5,9 +5,9 @@ plugins {
 }
 
 android {
-    namespace = "com.example.data"
+    namespace = "com.mahshad.database"
     compileSdk {
-        version = release(36) {
+        version = release(37) {
             minorApiLevel = 1
         }
     }
@@ -25,11 +25,6 @@ android {
 }
 
 dependencies {
-    api(project(":core:common"))
-    api(project(":core:network"))
-    api(project(":core:database"))
-    api(project(":core:model"))
-
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
@@ -37,7 +32,11 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
